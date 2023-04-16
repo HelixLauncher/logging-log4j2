@@ -49,16 +49,7 @@ public class JndiLookup implements StrLookup {
      */
     @Override
     public String lookup(final LogEvent event, final String key) {
-        if (key == null) {
-            return null;
-        }
-
-        try {
-            InitialContext ctx = new InitialContext();
-            return (String) ctx.lookup(convertJndiName(key));
-        } catch (NamingException e) {
-            return null;
-        }
+        return null;
     }
 
     /**
