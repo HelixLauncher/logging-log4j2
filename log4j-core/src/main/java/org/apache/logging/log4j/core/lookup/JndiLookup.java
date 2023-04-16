@@ -51,19 +51,7 @@ public class JndiLookup implements StrLookup {
      */
     @Override
     public String lookup(final LogEvent event, final String key) {
-        if (key == null) {
-            return null;
-        }
-
-        Context ctx = null;
-        try {
-            ctx = new InitialContext();
-            return (String) ctx.lookup(convertJndiName(key));
-        } catch (NamingException e) {
-            return null;
-        } finally {
-            Closer.closeSilent(ctx);
-        }
+        return null;
     }
 
     /**
